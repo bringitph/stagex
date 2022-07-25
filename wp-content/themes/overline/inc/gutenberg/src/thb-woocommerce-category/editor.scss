@@ -1,0 +1,49 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-fuel-themes-thb-woocommerce-category-grid {
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -7.5px;
+		.columns {
+			padding: 0 7.5px;
+			margin-bottom: 15px;
+		}
+		@for $i from 1 through 6 {
+			&[data-columns="#{$i}"] {
+				.columns {
+					flex-basis: ( 100% / $i );
+					max-width: ( 100% / $i );
+				}
+		  }
+		}
+		.overline-wc-category {
+			background: #ffff;
+			border: 1px solid $black;
+			text-align: center;
+			padding: 25px;
+			line-height: 1;
+			height: 100%;
+			.overline-wc-category-image {
+				margin: 0 auto 30px;
+				width: 83px;
+				height: auto;
+			}
+			.overline-wc-category-title {
+				font-size: 14px;
+				color: #5a5958;
+
+				.overline-wc-category-count {
+          vertical-align: super;
+          font-size: 11px;
+          margin-left: 5px;
+        }
+			}
+		}
+	}
+}

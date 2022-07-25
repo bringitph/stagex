@@ -1,0 +1,59 @@
+.wk-sup-comment-body{
+	background: #d7cad2;
+	padding: 2px 10px;
+	position: relative;
+	border-radius: 5px;
+	margin-bottom: 2px;
+}
+.wkohc-message-arrow-self::after{
+    border-color: #d7cad2 transparent;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-width: 10px 10px 0 0;
+    border-style: solid;
+}
+
+.wkohc-message-arrow-other::after{
+    border-color: #d7cad2 transparent;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-width: 10px 10px 0 0;
+    border-style: solid;
+}
+
+.wk-sup-comment-head {
+	font-size: 15px;
+    font-style: italic;
+}
+.wkohc-message-self{
+	text-align: left;
+	padding-top: 3px;
+}
+
+.wkohc-message-other{
+	text-align: right;
+	padding-top: 3px;
+}
+
+/* JS edit: Fix inability to send uploaded attachment in messages and field for filename. Step 1: Fix CSS */
+/* button.button.wkohc_remove {
+    padding: 0px 28px;
+}
+
+button.button.wkohc_upload_button {
+    padding: 10px 20px;
+} */
+
+input.wkohc_file_name {
+    margin-bottom: 0px !important;
+}

@@ -1,0 +1,28 @@
+*** Overline changelog ***
+
+2021-12-05 - version 1.0.6
+* Password Protected page design
+* Updated language file
+* Fixes alignwide scrollbar on Windows
+
+2021-09-05 - version 1.0.5
+* RTL Improvements
+
+2021-06-23 - version 1.0.4
+* Fixes a styling issue with product attributes tab.
+* Improves Elementor Pro compatibility
+* Fixes SVGs not showing on side cart
+
+2021-04-13 - version 1.0.3
+* Fixes horizontal scrollbar for Gutenberg Full-Width sections
+* Fixes Accent Color setting inside Customizer not affecting some areas.
+
+2021-02-28 - version 1.0.2
+* Fixes Accent Color setting inside Customizer not affecting some areas.
+
+2021-02-15 - version 1.0.1
+* Fixes price margin on product detail widget_pages
+* Fixes product thumbnails not scrolling on click on some cases
+
+2021-01-20 - version 1.0.0
+* Initial release

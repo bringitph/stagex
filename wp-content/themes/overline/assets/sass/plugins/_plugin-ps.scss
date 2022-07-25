@@ -1,0 +1,56 @@
+.ps {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	@include translate3d(0, 0, 0);
+
+	.touch & {
+		-webkit-overflow-scrolling: touch;
+	}
+  .ps__rail-x {
+		position: absolute;
+    bottom: 0;
+		left: 0;
+    width: 100%;
+		background-color: #f0f0f0;
+		height: 3px;
+    border-radius: 1.5px;
+		@include single-transition(opacity, 0.2s, $transition);
+		&.ps--in-scrolling {
+			.ps__thumb-x {
+				height: 3px;
+			}
+		}
+		.ps__thumb-x {
+			position: absolute;
+			background: $black;
+			right: 0;
+			height: 3px;
+			border-radius: 1.5px;
+		}
+	}
+	.ps__rail-y {
+		position: absolute;
+		right: 0;
+    height: 100%;
+		background-color: #f0f0f0;
+		width: 3px;
+    border-radius: 1.5px;
+		@include single-transition(opacity, 0.2s, $transition);
+		&.ps--in-scrolling {
+			.ps__thumb-y {
+				width: 3px;
+			}
+		}
+		.ps__thumb-y {
+			position: absolute;
+			background: $black;
+			right: 0;
+			width: 3px;
+			border-radius: 1.5px;
+		}
+	}
+	.ps__scrollbar-x-rail {
+		display: none;
+	}
+}

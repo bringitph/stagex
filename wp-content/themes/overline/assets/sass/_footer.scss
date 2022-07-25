@@ -1,0 +1,155 @@
+.thb-payment-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  li {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    color: $black;
+    border-radius: 2px;
+    background: transparent;
+    height: 26px;
+    align-items: center;
+    min-width: 38px;
+    padding: 0 4px;
+    font-size: 16px;
+
+    & + li {
+      margin-left: 4px;
+    }
+  }
+}
+.footer {
+  padding: 45px 0;
+  margin-top: 30px 0 5px;
+	background: #ffdab9;
+	border-top: 1px solid $black;
+
+  @include min-break($break-small) {
+    padding: 75px 0 50px;
+    margin-top: 60px;
+  }
+	&.footer-full-width-on {
+		>.row {
+			max-width: none;
+		}
+	}
+	.widget {
+		padding-bottom: 0;
+		border-bottom: 0;
+		.thb-widget-title {
+			color: $black;
+			font-size: 18px;
+	    margin-bottom: 25px;
+		}
+
+	}
+	.widget {
+		a {
+			&:hover {
+				color: $black;
+				text-decoration: underline;
+			}
+		}
+	}
+
+}
+.footer + .subfooter {
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 15px;
+		right: 15px;
+		display: block;
+		height: 1px;
+		background: $black;
+		margin: 0 auto;
+		@include min-break($break-small) {
+			left: 30px;
+			right: 30px;
+			max-width: 1290px;
+		}
+	}
+}
+.subfooter {
+  background: #ffdab9;
+	width: 100%;
+	z-index: 10;
+	font-size: 12px;
+  padding: 15px 0;
+	position: relative;
+  @include min-break($break-small) {
+    padding: 40px 0;
+  }
+  p {
+		margin-bottom: 15px;
+		font-size: inherit;
+		@include min-break($break-small) {
+			margin-bottom: 0;
+		}
+	}
+  .subfooter-row {
+		.rtl & {
+			flex-direction: row-reverse;
+		}
+	}
+	&.subfooter-full-width-on {
+		.row.subfooter-row {
+			max-width: none;
+		}
+	}
+	.thb-social-links-container {
+		display: block;
+		@include min-break($break-small) {
+			display: inline-flex;
+		}
+		& + .footer-payment-icons {
+			margin-top: 15px;
+			@include min-break($break-small) {
+				margin-top: 0;
+				margin-left: 20px;
+			}
+		}
+	}
+	a {
+		&:hover {
+			color: $black;
+			text-decoration: underline;
+		}
+	}
+}
+#scroll_to_top {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $black;
+	background: #fff;
+  color: $black;
+  font-size: 22px;
+  position: fixed;
+	bottom: -50px;
+	right: 15px;
+	z-index: 100;
+
+	.rtl & {
+		right: auto;
+		left: 15px;
+	}
+  &.active {
+		bottom: 15px;
+
+    .thb-sticky-active & {
+      bottom: 90px;
+    }
+	}
+  &:hover {
+    background: $black;
+    color: #fff;
+  }
+}

@@ -1,0 +1,23 @@
+.subheader {
+	display: flex;
+	align-items: center;
+	background: #000000;
+	text-align: center;
+	font-size: 13px;
+	width: 100%;
+	line-height: 1;
+	padding: 9px 0;
+  font-weight: 400;
+	margin: 0;
+	color: #fff;
+	@extend .admin-style;
+
+	a,
+	a:hover {
+		color: #fff;
+	}
+
+	p {
+		margin: 0;
+	}
+}

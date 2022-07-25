@@ -1,0 +1,112 @@
+.post {
+  margin-bottom: 30px;
+
+	&.style1 {
+		border: 1px solid $black;
+	}
+  .post-gallery {
+    position: relative;
+    border-bottom: 1px solid $black;
+    >a {
+      display: block;
+      line-height: 0;
+    }
+    .post-category {
+      display: block;
+			padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      text-align: left;
+      text-transform: uppercase;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      max-width: calc(60% - 20px);
+			background: #fff;
+			border-bottom: 1px solid $black;
+			border-right: 1px solid $black;
+      .rtl & {
+        left: auto;
+        right: 0px;
+				border-right: 0;
+				border-left: 1px solid $black;
+        text-align: right;
+      }
+      a {
+        display: inline-flex;
+        color: $black;
+        line-height: 0;
+      }
+    }
+  }
+	.post-inner-content {
+		padding: 15px;
+
+		@include min-break($break-small) {
+			padding: 25px;
+		}
+	}
+	.post-title {
+		h3 {
+			font-size: 20px;
+			font-weight: 500;
+		}
+	}
+  .post-excerpt {
+    font-size: 14px;
+
+    p {
+      font-size: inherit;
+    }
+  }
+  .thb-post-bottom {
+    font-size: 13px;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .thb-read-more {
+    color: $black;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 500;
+    svg {
+			fill: $black;
+			height: 8px;
+      width: auto;
+      margin-left: 10px;
+			@include translateX(-4px);
+			@include transition(all .15s linear);
+			.bar {
+				fill: $black;
+				@include scale(0,1);
+				@include transition(all .15s linear);
+			}
+		}
+    &:hover {
+			svg {
+				@include translateX(0px);
+				.bar {
+					@include scale(1,1);
+				}
+			}
+		}
+  }
+  &.related {
+    .post-gallery {
+      margin-bottom: 15px;
+    }
+    h6 {
+      margin-bottom: 5px;
+    }
+  }
+}
+.archive-title {
+  margin-bottom: 40px;
+
+  p {
+    font-size: 14px;
+  }
+}
